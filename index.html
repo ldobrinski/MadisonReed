@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8" />
+  <title>CIC ScreenMeet</title>
+  <link
+   href="https://cobrowse.screenmeet.com/CobrowseCore.js"
+   rel="preload"
+   as="script"
+  />
+  <style>
+   body {
+    overflow-x: hidden;
+   }
+   img {
+    max-width: 100%;
+   }
+   button {
+    margin: 8px;
+    color: white;
+    background-color: #911885;
+    position: absolute;
+    right: 100px;
+    width: 200px;
+    height: 50px;
+    border: 3px solid;
+    font-style: bold;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   }
+  </style>
+ </head>
+
+ <body>
+  <div style="height: 100%; position: relative">
+   <img src="./assets/MadisonReed.png" />
+   <script
+    type="text/javascript"
+    async="true"
+    src="https://cobrowse.screenmeet.com/CobrowseBootstrap.js"
+   ></script>
+   <button id="start" type="button" onclick="clickHandler()">
+    Begin CoBrowse Session
+   </button>
+   <script>
+    function clickHandler() {
+     window.Cobrowse.modal.openModal();
+     var x = document.getElementById("start");
+     x.hidden = true;
+    }
+   </script>
+  </div>
+ </body>
+</html>
